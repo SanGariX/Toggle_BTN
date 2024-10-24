@@ -1,0 +1,61 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: gray;
+}
+.wrapper {
+    height: 100vh;
+    width: 100vw;
+    background: url(../img/light.jpg) 0 0/cover no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.checkbox {
+    display: none;
+}
+.box{
+    margin: 20px;
+    width: 150px;
+    height: 70px;
+    background: url(../img/bg-off.png) 0 0/cover no-repeat;
+    border-radius: 30px;
+    transition: background 0.5s linear;
+    
+}
+.checkbox__btn{
+    display: block;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.circle{
+    margin: 0 10px;
+    border-radius: 50%;
+    height: 70%;
+    aspect-ratio: 1;
+    background:url(../img/sun.png) center center/cover no-repeat;
+    position: absolute;
+    transition: all 0.5s linear;
+}
+input.checkbox:checked ~ * div.circle{
+    margin: 0 0 0 60%;
+    background: url(../img/moon.png) center center/cover no-repeat;
+    background-size: 140%;
+}
+input.checkbox:checked ~ * div.box{
+    background: url(../img/bg-on.png) center bottom/cover no-repeat;
+
+}
+input.checkbox:checked ~ div.wrapper{
+    background: url(../img/dark.jpg) 0 0/cover no-repeat;
+}
+/*border-image-source: url(../img/border.png);
+border-image-slice:  60;
+border-image-repeat: round;*/
